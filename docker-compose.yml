@@ -11,3 +11,7 @@ services:
     build: ./prometheus
     restart: always
     network_mode: host
+  grafana:
+    image: grafana/grafana
+    restart: always
+    network_mode: host

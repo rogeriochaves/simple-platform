@@ -51,3 +51,7 @@ The way it works is by having all containers sharing the same host network, whic
 Go to http://yourserver/metrics you should see metrics for our example-app, including one named user_clicks. You can see the code used to generate it on example-app/index.js
 
 Now go to http://yourserver:9090, you will see the Prometheus dashboard, there you can query the metrics, you can add more apps in prometheus/prometheus.yml
+
+For building dashboards, you can go to grafana, on http://yourserver:3000, sing in with admin/admin, set up a new password, choose prometheus as data source with default options and localhost:9090, and get started.
+
+You can create a dashboard with the metric `user_clicks` or `process_resident_memory_bytes` for example
