@@ -2,8 +2,9 @@ FROM node
 
 WORKDIR /app
 
-RUN npm -g install http-server
+COPY package.json package-lock.json ./
+RUN npm install
 
 COPY . .
 
-CMD http-server -p 8123 .
+CMD PORT=8123 npm start

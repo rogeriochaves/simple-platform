@@ -7,3 +7,7 @@ services:
       - "443:443"
     restart: always
     network_mode: host
+  prometheus:
+    build: ./prometheus
+    restart: always
+    network_mode: host
