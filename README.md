@@ -6,28 +6,28 @@ Maybe you don't need a self-managed kubernetes with 3rd party monitoring solutio
 
 ## Part 1: provisioning
 
-  1. Create an account somewhere where you can spin up cheap instances (like on scaleway or digitalocean)
+1. Create an account somewhere where you can spin up cheap instances (like on [scaleway](https://cloud.scaleway.com/) or [digitalocean](https://www.digitalocean.com/))
 
-  1. Install docker machine if you don't already have it (try docker-machine in your bash)
+1. Install docker machine if you don't already have it (try docker-machine in your bash)
 
-  https://docs.docker.com/machine/install-machine/
+    https://docs.docker.com/machine/install-machine/
 
-  1. Provision docker machine on the instance following this guide:
+1. Provision docker machine on the instance following this guide:
 
-  https://docs.docker.com/machine/get-started-cloud/
+    https://docs.docker.com/machine/get-started-cloud/
 
-  1. Point your docker to the recently provisioned machine
+1. Point your docker to the recently provisioned machine
 
-  ```bash
-  eval $(docker-machine env your-machine-name)
-  ```
+    ```bash
+    eval $(docker-machine env your-machine-name)
+    ```
 
-  1. Clone this repo and put everything up
+1. Clone this repo and put everything up
 
-  ```bash
-  docker-compose build
-  docker-compose up -d
-  ```
+    ```bash
+    docker-compose build
+    docker-compose up -d
+    ```
 
 ## Part 2: running apps
 
@@ -55,7 +55,7 @@ For building dashboards, you can go to grafana, on http://yourserver:3000, sing 
 
 You can create a dashboard with the metric `user_clicks` or `process_resident_memory_bytes` for example
 
-For error tracking there are actually good SaaS with free plans available for small projects on (sentry.io)[https://sentry.io] or (rollbar.com)[https://rollbar.com]
+For error tracking there are actually good SaaS with free plans available for small projects on [sentry.io](https://sentry.io) or [rollbar.com](https://rollbar.com)
 
 ## Part 4: security
 
