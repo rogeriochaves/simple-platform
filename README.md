@@ -1,5 +1,4 @@
 # Simple Platform
-==================
 
 Docker Machine + Ngninx + Prometheus + Grafana to provision on a single host
 
@@ -55,3 +54,9 @@ Now go to http://yourserver:9090, you will see the Prometheus dashboard, there y
 For building dashboards, you can go to grafana, on http://yourserver:3000, sing in with admin/admin, set up a new password, choose prometheus as data source with default options and localhost:9090, and get started.
 
 You can create a dashboard with the metric `user_clicks` or `process_resident_memory_bytes` for example
+
+For error tracking there are actually good SaaS with free plans available for small projects on (sentry.io)[https://sentry.io] or (rollbar.com)[https://rollbar.com]
+
+## Part 4: security
+
+You should probably block the ports other then 80 or 443 in your host, and add a password to prometheus
